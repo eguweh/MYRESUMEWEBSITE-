@@ -6,40 +6,66 @@
     <title>Deon Marfo - Cybersecurity Professional</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Add Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <div id="particles-js"></div>
+    <div class="cyber-grid"></div>
+    
+    <!-- Add Matrix Rain Effect -->
+    <canvas id="matrix-rain"></canvas>
     
     <div class="social-sidebar">
-        <a href="https://www.linkedin.com/in/deon-marfo-a7ab501a7/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:deon.marfo123@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/deon-marfo-a7ab501a7/" target="_blank" title="LinkedIn" class="cyber-button">
+            <i class="fab fa-linkedin"></i>
+            <span class="cyber-button__glitch"></span>
+        </a>
+        <a href="mailto:deon.marfo123@gmail.com" title="Email" class="cyber-button">
+            <i class="fas fa-envelope"></i>
+            <span class="cyber-button__glitch"></span>
+        </a>
     </div>
-    <button id="backToTop" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    
+    <button id="backToTop" title="Back to Top" class="cyber-button">
+        <i class="fas fa-arrow-up"></i>
+        <span class="cyber-button__glitch"></span>
+    </button>
     
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo cool-logo"><span class="logo-fingerprint"><i class="fas fa-fingerprint"></i></span><span class="logo-initials">DM</span></div>
+            <div class="logo cyber-logo">
+                <span class="logo-fingerprint" style="background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #ff0080 100%); box-shadow: 0 0 16px #00f2fe88;">
+                    <i class="fas fa-fingerprint"></i>
+                </span>
+                <span class="logo-initials" style="font-family: 'Orbitron', 'Sora', sans-serif; font-size: 1.3em; font-weight: 1000; letter-spacing: 0.08em; color: #00f2fe; text-shadow: 0 0 8px #00f2fe88;">Deon Marfo</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="cyber-link">About</a></li>
+                <li><a href="#experience" class="cyber-link">Experience</a></li>
+                <li><a href="#skills" class="cyber-link">Skills</a></li>
+                <li><a href="#certifications" class="cyber-link">Certifications</a></li>
+                <li><a href="#contact" class="cyber-link">Contact</a></li>
             </ul>
-            <div class="theme-toggle">
+            <div class="theme-toggle cyber-button" tabindex="0" title="Toggle dark mode">
                 <i class="fas fa-moon"></i>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" style="background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.85)), url('https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1500&q=80'); background-size: cover; background-position: center;">
         <div class="hero-content">
-            <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
-            <h2><span class="cyber-color">Cybersecurity Expert</span> in <span class="ny-color">New York</span></h2>
-            <p>Cybersecurity Professional | Cloud Security | Threat Detection</p>
+            <div class="cyber-text">
+                <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
+                <h2><span class="cyber-color">Deon Marfo</span></h2>
+                <h2><span class="cyber-color">Cybersecurity Expert</span> in <span class="ny-color">New York</span></h2>
+                <p class="cyber-subtitle">Hi, welcome to my website!</p>
+            </div>
+            <a href="resume.pdf" class="download-btn" download>Download Resume</a>
         </div>
+        <div class="cyber-overlay"></div>
     </header>
 
     <section id="about" class="section">
@@ -47,8 +73,8 @@
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I have developed a robust technical skill set across security tools, cloud platforms, and threat analysis. My hands-on experience includes using <span class="important-term">Splunk</span>, <span class="important-term">Elastic Stack</span>, and <span class="important-term">QRadar</span> for advanced log analysis, real-time <span class="important-term">threat detection</span>, and <span class="important-term">incident response</span>. I am proficient in securing cloud environments with <span class="important-term">AWS</span>, <span class="important-term">Azure</span>, and <span class="important-term">Terraform</span>, and have a proven track record in <span class="important-term">phishing analysis</span>, <span class="important-term">incident response</span>, and <span class="important-term">threat intelligence</span>.</p>
-                    <p>My commitment to professional growth is demonstrated by earning industry-recognized certifications, including <span class="important-term">CompTIA Security+</span>, <span class="important-term">CompTIA CySA+</span>, <span class="important-term">Splunk Certified Power User</span>, <span class="important-term">AWS Cloud Practitioner</span>, <span class="important-term">Microsoft AZ-900</span>, <span class="important-term">SC-900</span>, <span class="important-term">SC-200</span>, and <span class="important-term">Linux Essentials</span>. These certifications validate my expertise in <span class="important-term">cybersecurity operations</span>, <span class="important-term">cloud security</span>, and <span class="important-term">security automation</span>, and empower me to deliver effective, up-to-date solutions in a rapidly evolving field.</p>
+                    <p>I have built a strong technical skill set over <strong>security tools</strong>, and <strong>threat analysis</strong> along with <strong>cloud platforms</strong>. I have hands-on experience using <strong>Splunk</strong>, <strong>Elastic Stack</strong>, and <strong>QRadar</strong> for advanced log analysis, real-time <strong>threat detection</strong>, and <strong>incident response</strong>. I am good at securing cloud environments in <strong>AWS</strong>, <strong>Azure</strong>, <strong>Terraform</strong> and have a proven track record in <strong>phishing analysis</strong> as well as <strong>incident response</strong> and <strong>threat intelligence</strong>.</p>
+                    <p>I have proven my commitment to professional growth by attaining highly recognized certifications in the industry, <strong>CompTIA Security+</strong>, <strong>CompTIA CySA+</strong>, <strong>Splunk Certified Power User</strong>, <strong>AWS Cloud Practitioner</strong>, <strong>Microsoft AZ-900</strong>, <strong>SC-900</strong>, <strong>SC-200</strong>, and <strong>Linux Essentials</strong>. These certifications validate my expertise in <strong>cybersecurity operations</strong> as well as <strong>cloud security</strong> and <strong>security automation</strong> which enable me to provide effective up to minute solutions in this fast changing field.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -71,112 +97,150 @@
         </div>
     </section>
 
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <!-- Professional Experience: Chronological Order (most recent first) -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><strong>Security Operations Center Analyst</strong></h3>
+                        <h4><strong>New York Life Insurance Company</strong></h4>
+                        <p class="date"><strong>May 2024 - Mar 2025</strong></p>
+                        <ul>
+                            <li><strong>Conducted</strong> real-time analysis of phishing tickets and incidents from external threats using <strong>IronPort</strong> and <strong>Agari</strong>, Message Header Analysis, Domain Spoofing, <strong>SPF</strong>'s, <strong>DKIM</strong>, <strong>DMARC</strong> & Display Name Imposters for New York Life's corporate infrastructure</li>
+                            <li><strong>Utilized</strong> (EDR) <strong>SentinelOne</strong> to detect and mitigate insider threats, including malicious executable files, commands, ports, and processes</li>
+                            <li><strong>Utilized</strong> the <strong>MITRE ATT&CK</strong> framework to map threat behaviors and enhance detection capabilities within <strong>QRadar</strong> for real-time monitoring and alerting on adversary tactics and techniques</li>
+                            <li><strong>Employed</strong> <strong>QRadar</strong> to monitor and analyze network activity, identifying and responding to security incidents and malicious activities</li>
+                            <li><strong>Understanding</strong> <strong>Web Application Firewalls (WAF)</strong> over different important domains prioritized by a company's infrastructure</li>
+                            <li><strong>Demonstrated</strong> strong communication skills and effectively evaluated real-time incidents in collaboration with the <strong>Security Operations Center (SOC)</strong></li>
+                            <li><strong>Executed</strong> the <strong>Risk Management Framework</strong>, <strong>NIST</strong> guidelines, and <strong>Committee on National Security Systems</strong> cybersecurity standards for cybersecurity risk management practices</li>
+                            <li><strong>Used</strong> <strong>AWS</strong> in a security-implemented environment including <strong>AWS CloudTrail</strong>, <strong>S3 Bucket</strong>, <strong>Security Hub</strong>, etc.</li>
+                            <li><strong>Maintained</strong> high standards of professionalism in protecting and serving a <strong>Fortune 500 company</strong></li>
+                            <li><strong>Applied</strong> <strong>MITRE D3FEND</strong> defensive strategies in conjunction with <strong>SentinelOne</strong> endpoint detection to strengthen the organization's defense against advanced threats</li>
+                            <li><strong>Conducted</strong> vulnerability assessments using <strong>Common Weakness Enumeration</strong>, identifying software vulnerabilities, and integrating findings with <strong>Akamai</strong> to implement application security improvements</li>
+                            <li><strong>Leveraged</strong> <strong>Agari</strong> for email threat detection and mitigation, aligning responses with <strong>MITRE ATT&CK</strong> techniques to enhance phishing and business email compromise (BEC) defenses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><strong>Security Engineering Intern</strong></h3>
+                        <h4><strong>Leidos</strong></h4>
+                        <p class="date"><strong>May 2023 - Aug 2023</strong></p>
+                        <ul>
+                            <li>Leveraged <strong>Terraform</strong> to automate security engineering tasks and infrastructure management, including automated patch management workflows for cloud and on-premises systems.</li>
+                            <li>Developed and maintained scripts in <strong>Python</strong> and <strong>Powershell</strong> to support security automation, log analysis, and endpoint monitoring.</li>
+                            <li>Utilized SIEM tools such as <strong>Splunk Enterprise</strong> for advanced log analysis, threat detection, and compliance reporting.</li>
+                            <li>Employed network capturing tools including <strong>Wireshark</strong> and <strong>Nmap</strong> for network traffic analysis, vulnerability scanning, and incident investigation.</li>
+                            <li>Implemented and managed EDR solutions such as <strong>CrowdStrike</strong> to provide endpoint protection, threat detection, and automated response capabilities.</li>
+                            <li>Developed and enforced patch management policies, ensuring timely updates and remediation of vulnerabilities across Windows 10, Windows 11, and Linux systems.</li>
+                            <li>Enhanced knowledge of information security principles, practices, and technologies, such as firewalls, intrusion detection systems, encryption, and secure coding.</li>
+                            <li>Familiarity with relevant laws, regulations, and industry standards, such as <strong>GDPR</strong>, <strong>HIPAA</strong>, <strong>PCI-DSS</strong>, <strong>SOX</strong>, <strong>ISO 27001</strong> & <strong>27002</strong>.</li>
+                            <li>Strong understanding of <strong>TCP/IP Fundamentals</strong> and the <strong>OSI Model</strong>.</li>
+                            <li>Understanding frameworks such as <strong>NIST 800-53</strong>, <strong>NIST 800-171</strong>, <strong>NIST 800-61</strong>, <strong>NIST 800-86</strong>.</li>
+                            <li>Implemented firewall and endpoint security using <strong>CrowdStrike</strong> and managed Splunk Enterprise for enhanced log analysis and incident response.</li>
+                            <li>Worked on security engineering projects with senior penetration testers, including tabletop exercises with modern tools and patch management simulations.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><strong>Cybersecurity Intern</strong></h3>
+                        <h4><strong>Cloudflare</strong></h4>
+                        <p class="date"><strong>May 2022 - Aug 2022</strong></p>
+                        <ul>
+                            <li>Integrated SIEM tools such as <strong>Splunk</strong>, <strong>QRadar</strong>, and the <strong>Elastic Stack</strong> with SOAR platforms like <strong>Cortex XSOAR</strong> to automate and streamline incident response, threat detection, and log analysis across virtualized environments.</li>
+                            <li>Utilized network capturing and analysis tools including <strong>Wireshark</strong>, <strong>tcpdump</strong>, and <strong>Burp Suite</strong> to monitor, capture, and analyze network traffic for threat hunting and vulnerability assessment.</li>
+                            <li>Employed EDR (Endpoint Detection and Response) solutions such as <strong>CrowdStrike</strong> and <strong>SentinelOne</strong> to monitor endpoints, detect advanced threats, and automate remediation actions.</li>
+                            <li>Designed and implemented secure virtual infrastructure using <strong>VMware vSphere</strong> and <strong>Microsoft Hyper-V</strong>, ensuring compliance with industry standard security practices and robust patch management processes.</li>
+                            <li>Developed and maintained a patch management strategy for virtual machines and containers, ensuring timely application of security updates and minimizing vulnerabilities across the infrastructure.</li>
+                            <li>Conducted in depth research on virtual infrastructure technologies and associated security protocols, recommending robust solutions aligned with <strong>NIST</strong> and <strong>ISO 27001</strong> guidelines.</li>
+                            <li>Performed comprehensive literature reviews on virtual infrastructure security, consolidating findings into a professional research paper highlighting key trends and challenges in the field.</li>
+                            <li>Developed and documented best practices for virtual infrastructure security, including configurations for <strong>VMware NSX</strong> and <strong>Docker</strong> container security, to guide future implementation and maintenance.</li>
+                            <li>Utilized <strong>Kali Linux</strong> tools such as <strong>Metasploit</strong>, <strong>Nmap</strong>, and <strong>Burp Suite</strong> for penetration testing, identifying vulnerabilities within the virtual infrastructure and recommending actionable mitigations.</li>
+                            <li>Configured and managed virtual machines using <strong>VMware Workstation</strong> and <strong>VirtualBox</strong>, ensuring secure deployment, patch compliance, and adherence to organizational policies.</li>
+                            <li>Conducted vulnerability assessments on virtual environments using <strong>Nessus</strong> and <strong>OpenVAS</strong>, evaluating risks and implementing necessary countermeasures to protect critical assets.</li>
+                            <li>Collaborated with cross functional teams, including SOC analysts and system administrators, to ensure the secure integration of virtual infrastructure with <strong>Splunk</strong> for log analysis, <strong>Elastic Stack</strong> (Elasticsearch, Logstash, Kibana) for centralized monitoring, and <strong>Microsoft Sentinel</strong> for advanced threat detection.</li>
+                            <li>Explored cutting edge virtualization technologies, including <strong>VMware vSphere</strong>, <strong>Microsoft Hyper-V</strong>, and containerization platforms such as <strong>Docker</strong> and <strong>Kubernetes</strong>, to enhance infrastructure scalability and security.</li>
+                            <li>Designed and simulated real world attack scenarios using tools like <strong>Cobalt Strike</strong> and <strong>Wireshark</strong> to test the resilience of virtual infrastructure and validate security controls.</li>
+                            <li>Created detailed technical documentation and delivered presentations to stakeholders, effectively communicating findings and recommendations.</li>
+                            <li>Applied secure network segmentation strategies within virtualized environments using <strong>Cisco ACI</strong> and <strong>Palo Alto Firewalls</strong> to reduce potential attack surfaces and improve lateral movement detection.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><strong>CTF & Ethical Hacking (Top 1%)</strong></h3>
+                        <h4><strong>TryHackMe</strong></h4>
+                        <p class="date"><strong>2022 - Present</strong></p>
+                        <ul>
+                            <li><strong>Ranked Top 1%</strong> globally for solving complex <strong>cybersecurity challenges</strong> in <strong>cryptography</strong>, <strong>web security</strong>, and <strong>penetration testing</strong></li>
+                            <li><strong>Demonstrated</strong> advanced skills in <strong>vulnerability exploitation</strong> and <strong>incident response</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><strong>Cybersecurity Trainee</strong></h3>
+                        <h4><strong>Springboard Cybersecurity Bootcamp</strong></h4>
+                        <p class="date"><strong>2022 - 2023</strong></p>
+                        <ul>
+                            <li><strong>Focused</strong> on <strong>cybersecurity fundamentals</strong>, <strong>network security</strong>, and <strong>security operations</strong></li>
+                            <li><strong>Completed</strong> technical labs and projects in <strong>threat analysis</strong> and <strong>incident response</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="tech-skills section">
         <div class="container">
             <h2>Technical Skills</h2>
             <div class="tech-skills-grid">
                 <div class="tech-skills-col">
                     <h3>Security Tools & SIEM</h3>
-                    <div class="skill-bar colored"><span class="skill-title">Splunk</span><div class="bar-bg"><div class="bar-fill splunk" style="width: 90%"></div></div><span class="skill-percent">90%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Elastic Stack</span><div class="bar-bg"><div class="bar-fill elastic" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">QRadar</span><div class="bar-bg"><div class="bar-fill qradar" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">SentinelOne</span><div class="bar-bg"><div class="bar-fill sentinelone" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">IronPort/Agari</span><div class="bar-bg"><div class="bar-fill ironport" style="width: 90%"></div></div><span class="skill-percent">90%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">ServiceNow</span><div class="bar-bg"><div class="bar-fill servicenow" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Splunk</span><div class="bar-bg"><div class="bar-fill splunk" style="width: 90%" data-animate="90"></div></div><span class="skill-percent">90%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Elastic Stack</span><div class="bar-bg"><div class="bar-fill elastic" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">QRadar</span><div class="bar-bg"><div class="bar-fill qradar" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">SentinelOne</span><div class="bar-bg"><div class="bar-fill sentinelone" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">IronPort/Agari</span><div class="bar-bg"><div class="bar-fill ironport" style="width: 90%" data-animate="90"></div></div><span class="skill-percent">90%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">ServiceNow</span><div class="bar-bg"><div class="bar-fill servicenow" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Malware Analysis</span><div class="bar-bg"><div class="bar-fill malware" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
                 </div>
                 <div class="tech-skills-col">
                     <h3>Cloud & Infrastructure</h3>
-                    <div class="skill-bar colored"><span class="skill-title">AWS</span><div class="bar-bg"><div class="bar-fill aws" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Azure</span><div class="bar-bg"><div class="bar-fill azure" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Terraform</span><div class="bar-bg"><div class="bar-fill terraform" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Docker/Kubernetes</span><div class="bar-bg"><div class="bar-fill docker" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">VMware/Hyper-V</span><div class="bar-bg"><div class="bar-fill vmware" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Git/GitHub</span><div class="bar-bg"><div class="bar-fill git" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Linux Administration</span><div class="bar-bg"><div class="bar-fill linux" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Windows Server</span><div class="bar-bg"><div class="bar-fill windows" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">AWS</span><div class="bar-bg"><div class="bar-fill aws" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Azure</span><div class="bar-bg"><div class="bar-fill azure" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Terraform</span><div class="bar-bg"><div class="bar-fill terraform" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Docker/Kubernetes</span><div class="bar-bg"><div class="bar-fill docker" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">VMware/Hyper-V</span><div class="bar-bg"><div class="bar-fill vmware" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
                 </div>
                 <div class="tech-skills-col">
                     <h3>Security Operations & Programming</h3>
-                    <div class="skill-bar colored"><span class="skill-title">Incident Response</span><div class="bar-bg"><div class="bar-fill incident" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Threat Intelligence</span><div class="bar-bg"><div class="bar-fill threat" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Python</span><div class="bar-bg"><div class="bar-fill python" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">PowerShell</span><div class="bar-bg"><div class="bar-fill powershell" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Bash/Shell</span><div class="bar-bg"><div class="bar-fill bash" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">SQL</span><div class="bar-bg"><div class="bar-fill sql" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Digital Forensics</span><div class="bar-bg"><div class="bar-fill forensics" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Malware Analysis</span><div class="bar-bg"><div class="bar-fill malware" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Incident Response</span><div class="bar-bg"><div class="bar-fill incident" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Threat Intelligence</span><div class="bar-bg"><div class="bar-fill threat" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
                 </div>
                 <div class="tech-skills-col">
                     <h3>Security Frameworks & Compliance</h3>
-                    <div class="skill-bar colored"><span class="skill-title">MITRE ATT&CK</span><div class="bar-bg"><div class="bar-fill mitre" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">NIST Framework</span><div class="bar-bg"><div class="bar-fill nist" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">ISO 27001</span><div class="bar-bg"><div class="bar-fill iso" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">GDPR/CCPA</span><div class="bar-bg"><div class="bar-fill gdpr" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">PCI DSS</span><div class="bar-bg"><div class="bar-fill pci" style="width: 75%"></div></div><span class="skill-percent">75%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Zero Trust</span><div class="bar-bg"><div class="bar-fill zerotrust" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Security Architecture</span><div class="bar-bg"><div class="bar-fill arch" style="width: 80%"></div></div><span class="skill-percent">80%</span></div>
-                    <div class="skill-bar colored"><span class="skill-title">Risk Management</span><div class="bar-bg"><div class="bar-fill risk" style="width: 85%"></div></div><span class="skill-percent">85%</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="intro section">
-        <div class="container">
-            <h2 class="sr-only">Introduction</h2>
-            <div class="intro-text">
-                <!-- Removed intro paragraphs about Deon Marfo's background and interests -->
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Security Operations Center Analyst</h3>
-                        <h4>New York Life Insurance Company</h4>
-                        <p class="date">May 2024 - Mar 2025</p>
-                        <ul>
-                            <li>Conducted real-time analysis of phishing tickets and incidents using IronPort and Agari</li>
-                            <li>Utilized SentinelOne EDR for threat detection and mitigation</li>
-                            <li>Implemented MITRE ATT&CK framework for enhanced detection capabilities</li>
-                            <li>Managed QRadar for network activity monitoring and security incident response</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Security Engineering Intern</h3>
-                        <h4>Leidos</h4>
-                        <p class="date">June 2023 - August 2023</p>
-                        <ul>
-                            <li>Leveraged Terraform for security engineering automation</li>
-                            <li>Implemented security solutions using Python and PowerShell</li>
-                            <li>Enhanced knowledge of information security principles and practices</li>
-                            <li>Implemented Splunk Enterprise for log analysis</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Cybersecurity Intern</h3>
-                        <h4>Cloudflare</h4>
-                        <p class="date">May 2022 - August 2022</p>
-                        <ul>
-                            <li>Integrated SIEM tools with SOAR platforms</li>
-                            <li>Designed secure virtual infrastructure using VMware and Hyper-V</li>
-                            <li>Conducted penetration testing using Kali Linux tools</li>
-                            <li>Implemented network segmentation strategies</li>
-                        </ul>
-                    </div>
+                    <div class="skill-bar colored"><span class="skill-title">MITRE ATT&CK</span><div class="bar-bg"><div class="bar-fill mitre" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">NIST Framework</span><div class="bar-bg"><div class="bar-fill nist" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">ISO 27001</span><div class="bar-bg"><div class="bar-fill iso" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">GDPR/CCPA</span><div class="bar-bg"><div class="bar-fill gdpr" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">PCI DSS</span><div class="bar-bg"><div class="bar-fill pci" style="width: 75%" data-animate="75"></div></div><span class="skill-percent">75%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Zero Trust</span><div class="bar-bg"><div class="bar-fill zerotrust" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Security Architecture</span><div class="bar-bg"><div class="bar-fill arch" style="width: 80%" data-animate="80"></div></div><span class="skill-percent">80%</span></div>
+                    <div class="skill-bar colored"><span class="skill-title">Risk Management</span><div class="bar-bg"><div class="bar-fill risk" style="width: 85%" data-animate="85"></div></div><span class="skill-percent">85%</span></div>
                 </div>
             </div>
         </div>
@@ -283,21 +347,6 @@
                         <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
                         <span class="skill-percent">80%</span>
                     </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Git/GitHub</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Linux Administration</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 85%"></div></div>
-                        <span class="skill-percent">85%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Windows Server</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
                 </div>
 
                 <div class="skill-category">
@@ -319,36 +368,6 @@
                         <div class="skill-desc">
                             Threat hunting, IOC analysis, and intelligence gathering. Integration of threat feeds and custom intelligence platforms.
                         </div>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Python</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>PowerShell</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Bash/Shell</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
-                        <span class="skill-percent">75%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>SQL</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Digital Forensics</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 80%"></div></div>
-                        <span class="skill-percent">80%</span>
-                    </div>
-                    <div class="skill-item press-skill" tabindex="0">
-                        <span>Malware Analysis</span>
-                        <div class="bar-bg"><div class="bar-fill" style="width: 75%"></div></div>
-                        <span class="skill-percent">75%</span>
                     </div>
                 </div>
 
@@ -563,7 +582,7 @@
                 </div>
                 <!-- Project 12 -->
                 <div class="project-card">
-                    <div class="project-logo"><i class="fas fa-cloud-shield"></i></div>
+                    <div class="project-logo"><i class="fas fa-cloud-shield-alt"></i></div>
                     <h3>Cloud Security Posture Management</h3>
                     <p>Implemented security controls and continuous monitoring for AWS and Azure environments, ensuring compliance with industry standards.</p>
                     <div class="project-skills">Skills: AWS, Azure, Cloud Security, Compliance, Monitoring</div>
@@ -640,7 +659,6 @@
             <h2>Contact</h2>
             <div class="contact-info">
                 <p><i class="fas fa-envelope"></i> deon.marfo123@gmail.com</p>
-                <p><i class="fas fa-phone"></i> 929-360-6111</p>
                 <p><i class="fas fa-map-marker-alt"></i> New York, NY</p>
                 <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/deon-marfo-a7ab501a7/" target="_blank">LinkedIn Profile</a></p>
             </div>
@@ -654,5 +672,121 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#00f2fe' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: '#00f2fe',
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: 'none',
+                    random: true,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix-rain');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()';
+        const charArray = chars.split('');
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        
+        const drops = [];
+        for(let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(10, 10, 15, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#00f2fe';
+            ctx.font = fontSize + 'px monospace';
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = charArray[Math.floor(Math.random() * charArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 33);
+
+        // Add cyber glitch effect to elements
+        document.querySelectorAll('.cyber-button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.classList.add('glitch');
+                setTimeout(() => button.classList.remove('glitch'), 200);
+            });
+        });
+
+        // Animate stats
+        function animateStats() {
+            document.querySelectorAll('.stat-number').forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-value'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if(current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 40);
+            });
+        }
+
+        // Initialize animations when elements are in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    if(entry.target.classList.contains('hero-stats')) {
+                        animateStats();
+                    }
+                    entry.target.classList.add('animate');
+                }
+            });
+        });
+
+        document.querySelectorAll('.hero-stats, .timeline-item, .project-card, .cert-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html> 
