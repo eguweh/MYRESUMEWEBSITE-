@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #212121; /* Almost black */
-    --secondary-color: #ff9800; /* Bright orange */
-    --accent-color: #1976d2; /* Vivid blue */
-    --highlight-color: #43a047; /* Vivid green */
-    --text-color: #212121;
-    --light-bg: #fff;
-    --dark-bg: #212121;
-    --card-shadow: 0 10px 30px -15px rgba(33,33,33,0.10);
+    --primary-color: #0a192f; /* Deep navy/gray */
+    --secondary-color: #64ffda; /* Vibrant teal */
+    --accent-color: #3a86ff; /* Bright blue */
+    --highlight-color: #00b4d8; /* Cyan */
+    --text-color: #e0e0e0; /* Light gray text */
+    --light-bg: #121212; /* Very dark background */
+    --dark-bg: #0a192f; /* Deep navy/gray */
+    --card-shadow: 0 10px 30px -15px rgba(10, 25, 47, 0.25);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --gradient: linear-gradient(120deg, #1976d2 0%, #ff9800 100%);
+    --gradient: linear-gradient(120deg, #3a86ff 0%, #64ffda 100%);
 }
 
 /* Dark mode variables */
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(10, 25, 47, 0.85);
+    background-color: rgba(26, 26, 46, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(35, 41, 70, 0.92), rgba(35, 41, 70, 0.92)),
+    background: linear-gradient(rgba(26, 26, 46, 0.92), rgba(26, 26, 46, 0.92)),
         url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80');
     background-size: cover;
     background-position: center;
@@ -584,6 +584,9 @@ footer {
     color: var(--primary-color);
     transform: translateY(-3px);
 }
+.social-sidebar a i {
+    color: var(--secondary-color) !important;
+}
 
 #backToTop {
     position: fixed;
@@ -646,16 +649,16 @@ footer {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--primary-color);
+    background: #1a1a2e;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--light-bg);
+    background: #4361ee;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);
+    background: #00b4d8;
 }
 
 .profile-photo {
@@ -902,12 +905,12 @@ section h2::after {
     border-radius: 6px;
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.skill-bar:nth-child(1) .bar-fill { background: #3da9fc; }
-.skill-bar:nth-child(2) .bar-fill { background: #eeb902; }
-.skill-bar:nth-child(3) .bar-fill { background: #21b573; }
-.skill-bar:nth-child(4) .bar-fill { background: #e94560; }
-.skill-bar:nth-child(5) .bar-fill { background: #a259ff; }
-.skill-bar:nth-child(6) .bar-fill { background: #ff7f50; }
+.skill-bar:nth-child(1) .bar-fill { background: #4361ee; }
+.skill-bar:nth-child(2) .bar-fill { background: #00b4d8; }
+.skill-bar:nth-child(3) .bar-fill { background: #4cc9f0; }
+.skill-bar:nth-child(4) .bar-fill { background: #e63946; }
+.skill-bar:nth-child(5) .bar-fill { background: #7209b7; }
+.skill-bar:nth-child(6) .bar-fill { background: #f72585; }
 
 .tech-skills-col:nth-child(2) .skill-bar:nth-child(1) .bar-fill { background: #ff6f61; }
 .tech-skills-col:nth-child(2) .skill-bar:nth-child(2) .bar-fill { background: #6c63ff; }
@@ -940,29 +943,29 @@ section h2::after {
 }
 
 .cyber-color {
-    color: #1e90ff; /* Bright blue for Cybersecurity Expert */
+    color: #4361ee; /* Royal blue for Cybersecurity Expert */
     font-weight: bold;
 }
 
 .ny-color {
-    color: #ff4c4c; /* Vibrant red for New York */
+    color: #e63946; /* Vibrant red for New York */
     font-weight: bold;
 }
 
 /* Custom colored bars for Security Frameworks & Compliance */
-.bar-fill.mitre { background: #3da9fc; }
-.bar-fill.nist { background: #eeb902; }
-.bar-fill.iso { background: #21b573; }
-.bar-fill.gdpr { background: #e94560; }
-.bar-fill.pci { background: #a259ff; }
-.bar-fill.zerotrust { background: #ff7f50; }
-.bar-fill.arch { background: #43d8c9; }
-.bar-fill.risk { background: #6c63ff; }
+.bar-fill.mitre { background: #4361ee; }
+.bar-fill.nist { background: #00b4d8; }
+.bar-fill.iso { background: #4cc9f0; }
+.bar-fill.gdpr { background: #e63946; }
+.bar-fill.pci { background: #7209b7; }
+.bar-fill.zerotrust { background: #f72585; }
+.bar-fill.arch { background: #3a0ca3; }
+.bar-fill.risk { background: #4895ef; }
 
 /* Custom colored bars for ServiceNow, Cloud & Infrastructure, and Security Operations & Programming */
-.bar-fill.servicenow { background: #ffb300; }
+.bar-fill.servicenow { background: #00b4d8; }
 .bar-fill.aws { background: #ff9900; }
-.bar-fill.azure { background: #007fff; }
+.bar-fill.azure { background: #0078d4; }
 .bar-fill.terraform { background: #5c4ee5; }
 .bar-fill.docker { background: #2496ed; }
 .bar-fill.vmware { background: #607d8b; }
@@ -970,11 +973,11 @@ section h2::after {
 .bar-fill.linux { background: #333; }
 .bar-fill.windows { background: #00adef; }
 
-.bar-fill.incident { background: #e94560; }
-.bar-fill.threat { background: #43a047; }
+.bar-fill.incident { background: #e63946; }
+.bar-fill.threat { background: #4cc9f0; }
 .bar-fill.python { background: #3572A5; }
 .bar-fill.powershell { background: #012456; }
 .bar-fill.bash { background: #4eaa25; }
 .bar-fill.sql { background: #e38c00; }
-.bar-fill.forensics { background: #8e44ad; }
-.bar-fill.malware { background: #c0392b; } 
+.bar-fill.forensics { background: #7209b7; }
+.bar-fill.malware { background: #f72585; } 
