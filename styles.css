@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #0a192f; /* Deep navy/gray */
-    --secondary-color: #64ffda; /* Vibrant teal */
-    --accent-color: #3a86ff; /* Bright blue */
-    --highlight-color: #00b4d8; /* Cyan */
-    --text-color: #e0e0e0; /* Light gray text */
-    --light-bg: #121212; /* Very dark background */
-    --dark-bg: #0a192f; /* Deep navy/gray */
-    --card-shadow: 0 10px 30px -15px rgba(10, 25, 47, 0.25);
+    --primary-color: #000000; /* Black */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #cccccc; /* Light gray accent */
+    --highlight-color: #888888; /* Medium gray highlight */
+    --text-color: #ffffff; /* White text */
+    --light-bg: #000000; /* Black background */
+    --dark-bg: #000000; /* Black background */
+    --card-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.25);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --gradient: linear-gradient(120deg, #3a86ff 0%, #64ffda 100%);
+    --gradient: linear-gradient(120deg, #000000 0%, #cccccc 100%);
 }
 
 /* Dark mode variables */
